@@ -21,11 +21,14 @@ def random_fact():
     fact_list=[]
     for x in r.json()["all"]:
         fact_list.append(x.get("text"))
-    list_count=len(fact_list) -1
-    random_fact=random.randint(0, list_count)
     print("\nEnjoy a random cat fact!")
     print("***************************")
-    print(fact_list[random_fact])
-
+    print(random.choice(fact_list))
+    
 #main()
 random_fact()
+
+def most_upvotes():
+    r = requests.get("https://cat-fact.herokuapp.com/facts")
+    print(max
+most_upvotes()
